@@ -227,9 +227,6 @@
 .article-video::-webkit-media-controls-panel {
     background-color: rgba(30, 31, 32, 0.9);
 }
-
-
-
 /* Container for the PDF */
 .pdf-container {
     width: 100%;
@@ -277,4 +274,40 @@
     .mobile-pdf-action {
         display: block; /* Show the button on mobile */
     }
+}
+
+.dictionary-selector {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.selector-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.selector-btn:hover {
+    background-color: var(--card-hover);
+    color: var(--text-main);
+    border-color: #444746;
+}
+
+/* The Active State (mimics Gemini's selected tab) */
+.selector-btn.btn-active {
+    background-color: rgba(66, 133, 244, 0.1);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    box-shadow: 0 0 15px rgba(66, 133, 244, 0.1);
 }
